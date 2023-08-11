@@ -29,12 +29,12 @@
   Navigation Menu-->Kubernetes Engine-->Clusters
 
 # Let's Clone the repository and test the application
-- First navigate to your home directory by typing <cd ~> then clone the repo <git clone https://github.com/googlecodelabs/monolith-to- 
-  microservices.git>
+- First navigate to your home directory by typing <cd ~> then clone the repo
+- <git clone https://github.com/googlecodelabs/monolith-to-microservices.git>
 - Then navigate <cd ~/monolith-to-microservices> then run < ./setup.sh > this is for installing nodejs dependencies which requires for 
   deploying the application.
-- Then test with this command <nvm install --lts> where it will ensure the latest version of nvm.
-- Let's test the application now by navigating to <cd ~/monolith-to-microservices/monolith> and then run <npm start>
+- Then test with this command < nvm install --lts > where it will ensure the latest version of nvm.
+- Let's test the application now by navigating to < cd ~/monolith-to-microservices/monolith > and then run < npm start >
 - It will display the output <Monolith listening on port 8080!> In the console you can click on the preview icon which is present on the top 
   right corner
 
