@@ -100,7 +100,7 @@
    - Even though the application get updated with newer image across all replicas kubernetes rolling update mechanism will ensure the app is       up and running. Let's inform to kubernetes that we want to deploy the app with newer version to do that please follow below commands
      kubectl set image deployment/{type your deployment name} monolith=gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0
    - Example: kubectl set image deployment/monolith monolith=gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0
-   - Verify your deployment is running <kubectl get pods>
+   - Verify your deployment is running  <kubectl get pods>
    - you can just click on the external ip followed by it's port or simply use npm start
 
   # It's time to clean up
