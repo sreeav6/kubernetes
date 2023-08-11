@@ -19,10 +19,10 @@
   the project we use gcloud config set project<project-id>, then set zone as well { gcloud config set compute/zone <zone name> }. 
 
 # Let's create a GKE Cluster
-- In order to create this we have prerequisites that is you should enable container registry api to do this <gcloud services enable 
-  container.googleapis.com>
-- Now create cluster with three nodes gcloud container clusters create <give any name here> --num-nodes 3 Example: <gcloud container clusters 
-  create firstcluster --num-nodes=3>
+- In order to create this we have prerequisites that is you should enable container registry api to do this < gcloud services enable 
+  container.googleapis.com >
+- Now create cluster with three nodes gcloud container clusters create <give any name here> --num-nodes 3 Example: < gcloud container 
+  clusters create firstcluster --num-nodes=3 >
 - Here it will take time to create the cluster, In the mean while you can observe the logs in the Cloud Logging section how the cluster 
   creating is happening. Once cluster creating is done we will run the command to check whether 3 compute instances were created or not to 
   check this we run <gcloud compute instances list> you will observe the output of it. You can check in the Google cloud console by clicking 
@@ -94,13 +94,13 @@
       npm run build:monolith
 - Now again we need to rebuild the Docker container and push it to the Google cloud container registry here we use tag as 2.0.0 to do that      use the below command
 - Examples:
-      cd ~/monolith-to-microservices/monolith
-      gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0 .
+        cd ~/monolith-to-microservices/monolith
+      " gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0 . "
  # Let's deploy this newer image to GKE
    - Even though the application get updated with newer image across all replicas kubernetes rolling update mechanism will ensure the app is       up and running. Let's inform to kubernetes that we want to deploy the app with newer version to do that please follow below commands
      kubectl set image deployment/{type your deployment name} monolith=gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0
    - Example: kubectl set image deployment/monolith monolith=gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0
-   - Verify your deployment is running  <kubectl get pods>
+   - Verify your deployment is running  < kubectl get pods >
    - you can just click on the external ip followed by it's port or simply use npm start
 
   # It's time to clean up
