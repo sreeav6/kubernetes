@@ -63,7 +63,8 @@
 - If you want to see the replica sets < kubectl get rs >
 - Even you can get all once using < kubectl get all >
 - If you want to check the deployment { kubectl describe deployment/< deployment name> }
-- Even you can edit the pods, deployments, replica sets by using  {kubectl edit deployment/< deployment name > }, { kubectl edit pod/< pod name > }
+- Even you can edit the pods, deployments, replica sets by using  {kubectl edit deployment/< deployment name > }, { kubectl edit pod/< pod 
+  name > }
 - In order to delete the pod use <kubectl delete pod {pod name}> 
 
 # Here we will expose the application to the internet
@@ -72,7 +73,7 @@
 - Basically a Service provides networking and IP support to your application's Pods. GKE creates an external IP and a Load Balancer for your  
   application
 - command as follows <kubectl expose deployment {type your deployname} --type=LoadBalancer --port 80 --target-port 8080
-- Example: kubectl expose deployment monolith --type=LoadBalancer --port 80 --target-port 8080
+- Example: "kubectl expose deployment monolith --type=LoadBalancer --port 80 --target-port 8080"
 
 # Let's access the service  
 - Here we are going to access the LoadBalance service which you were exposed by using this command <kubectl get service>
@@ -94,7 +95,7 @@
       npm run build:monolith
 - Now again we need to rebuild the Docker container and push it to the Google cloud container registry here we use tag as 2.0.0 to do that      use the below command
 - Examples:
-        cd ~/monolith-to-microservices/monolith
+       firt navigate to this path cd ~/monolith-to-microservices/monolith and then run the below one
       " gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0 . "
  # Let's deploy this newer image to GKE
    - Even though the application get updated with newer image across all replicas kubernetes rolling update mechanism will ensure the app is       up and running. Let's inform to kubernetes that we want to deploy the app with newer version to do that please follow below commands
