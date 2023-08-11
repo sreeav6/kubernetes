@@ -63,7 +63,7 @@
 - If you want to see the replica sets < kubectl get rs >
 - Even you can get all once using < kubectl get all >
 - If you want to check the deployment { kubectl describe deployment/< deployment name> }
-- Even you can edit the pods, deployments, replica sets by using  {kubectl edit deployment/<deployment name> }, { kubectl edit pod/<pod name> }
+- Even you can edit the pods, deployments, replica sets by using  {kubectl edit deployment/< deployment name > }, { kubectl edit pod/< pod name > }
 - In order to delete the pod use <kubectl delete pod {pod name}> 
 
 # Here we will expose the application to the internet
