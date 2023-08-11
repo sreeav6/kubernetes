@@ -82,7 +82,7 @@
 # Now scale our deployment 
 - Here we are scaling our deployment to 3 replicas to do this type this command
 - <kubectl scale deployment {type your deployment name} --replicas=3
-- Verify the deployment has been scaled by using <kubectl get all>
+- Verify the deployment has been scaled by using < kubectl get all >
 
 # Now let's do some changes to the application 
 - In order to make some changes please follow the below commands
