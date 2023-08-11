@@ -53,7 +53,7 @@
 - The flow goes like this first create deployment resource where it manages multiple copies of your application called replicas and schedules 
   them to run on the individual nodes in the cluster.
 - Use this command to deploy the application <kubectl create deployment monolith --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:1.0.0>
-- Now verify the deployment by using <kubectl get all> the output will display the pods, services, deployments, replica sets e.t.c
+- Now verify the deployment by using < kubectl get all > the output will display the pods, services, deployments, replica sets e.t.c
 - You can verify in the console by clicking Navigation Menu-->Kubernetes-->Cluster
 
 # Now see how to solve the erros by troubleshooting with some commands
