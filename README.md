@@ -91,9 +91,9 @@
 - mv index.js.new index.js
 - To verify the changes took affect or not use this command < cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js >
 - Let's build this new app to do this type below commands
-      cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js
+     < cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js >
       --------------------------------- 
-      npm run build:monolith
+     < npm run build:monolith >
 - Now again we need to rebuild the Docker container and push it to the Google cloud container registry here we use tag as 2.0.0 to do that      use the below command
 - Examples:
        firt navigate to this path cd ~/monolith-to-microservices/monolith and then run the below one
