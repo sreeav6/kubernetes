@@ -92,6 +92,7 @@
 - To verify the changes took affect or not use this command < cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js >
 - Let's build this new app to do this type below commands
       cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js
+      --------------------------------- 
       npm run build:monolith
 - Now again we need to rebuild the Docker container and push it to the Google cloud container registry here we use tag as 2.0.0 to do that      use the below command
 - Examples:
@@ -107,8 +108,11 @@
   # It's time to clean up
   - Delete git repo to do this type < cd ~ >and then rm -rf monolith-to-microservices
   - Delete google container images to do use below ones
-    gcloud container images delete gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:1.0.0 --quiet
-    gcloud container images delete gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0 --quiet
+    
+    < gcloud container images delete gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:1.0.0 --quiet >
+    
+    < gcloud container images delete gcr.io/${GOOGLE_CLOUD_PROJECT}/monolith:2.0.0 --quiet >
+    
   - Delete build artifacts from cloud storage
     gcloud builds list | grep 'SOURCE' | cut -d ' ' -f2 | while read line; do gsutil rm $line; done
   - Delete GKE service to do that < kubectl delete service {type your service name} >
