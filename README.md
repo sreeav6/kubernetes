@@ -1,4 +1,4 @@
-# Here we are taking example from google cloud labs
+# Here we are taking example from google cloud 
 
 - We will learn how to Deploy, Scale, Update the website with zero downtime with GKE
 
